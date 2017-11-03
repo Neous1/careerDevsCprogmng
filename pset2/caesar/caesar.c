@@ -1,9 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-// #include <stlib.h>
+#include <stdlib.h>
 
 // string message;
+
+string isalpha();
+char isupper();
 int main(int argc, string argv[])
 {
     if (argc != 2){
@@ -14,19 +17,37 @@ int main(int argc, string argv[])
     
     char c; 
     int num;
-    printf("15 . %d\n", k);
+    char letter ;
+    printf("15 .The code is:  %d\n", k);
         printf("What is the message: ");
     string message = get_string();
     // printf("%s\n", message);
     for(int i = 0, len = strlen(message);i < len; i++){
-        // printf("20 . %d\n", len);
-        printf("%c\n", message[i]);
-         num = ((message[i] -65)+ k) % 26; 
-        printf(" num is : %d\n", num);
-        c = num + 65;
-        printf("char is %c  ", c);
+        // printf("25 . %c\n", message[i]);
+        if (isalpha(message[i]))
+        {
+            printf("28 .%c is a letter\n", message[i]);
+            letter = message[i];
+            if(isupper(letter))
+            {
+                printf("32 . %c  is upper\n", letter);
+                num = ((letter -65)+ k) % 26; 
+                printf("34 .num is : %d\n", num);
+                c = num + 65;
+                printf("37char is %c  ", c);
+            }
+            else
+            printf("40 .%c is NOT upper\n", letter);
+                num = ((letter -97)+ k) % 26; 
+                printf("42 .num is : %d\n", num);
+                c = num + 97;
+                printf("44. char is %c  ", c);            
+        }
+        else{
+            printf("43. %c is NOT a letter \n", message[i]);
+        }
     } 
-
+    // return 0;
 }
 
 
