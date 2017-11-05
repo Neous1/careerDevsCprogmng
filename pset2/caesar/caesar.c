@@ -15,6 +15,7 @@ int main(int argc, string argv[])
     
     if (argc != 2){
         // printf("Please provide a positive number\n");
+        return 1;
     }
     string code = argv[1];
     int k = atoi(code);
