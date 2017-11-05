@@ -54,7 +54,6 @@ int main(int argc, string argv[])
             printf("52. %c is NOT a letter \n", message[i]);
         }
         
-
         // printf("lower case %c\n", message[i]);
     } 
     return 0;
