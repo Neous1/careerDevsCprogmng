@@ -1,0 +1,29 @@
+
+Get the key
+if argc != 2 => throw error
+
+string code = argv[1]
+int k = atoi(code)
+
+get the plaintext
+    get_string()
+encipher
+    one character
+    entire plaintext
+print ciphertext
+
+
+
+
+get key form command line argument
+run key intor integer
+prompt for plaintextr
+for each character in the plaintext string
+    if alphabetic 
+            isalpha()
+            isupper()
+            islower()
+        preserve case
+        shift plaintext character by key
+print ciphertext
+
