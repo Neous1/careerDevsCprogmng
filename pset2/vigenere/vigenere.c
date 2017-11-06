@@ -27,12 +27,12 @@ int main(int argc, string argv[])
     // printf("%s\n", plaintext);
     printf("ciphertext: ");
     
-    // char c; 
-    // int num, 
+    char c; 
+    int num; 
     int knum;
     char letter;
     int klen = strlen(key);
-    for (int i = 0, j = 0, plen = strlen(plaintext); i < plen; i++)
+    for (int i = 0, j = 0, plen = strlen(plaintext); i <= plen; i++)
     {
         // printf("character @ index %d is : %c\n", i,plaintext[i]);  
         letter = plaintext[i];
@@ -46,25 +46,28 @@ int main(int argc, string argv[])
                     //convert all char to lowercase
                     key[j] = tolower(key[j]);
                     //convert each letter to its alphabetical index
-                    knum = (key[j]-97); //% 26) + 97;
+                    knum = (key[j]-97);// % 26)+ 97;
                     // printf("48 . key[j] is %i\n", knum);
                     
-                    // if(j % klen )//((letter % klen) == (key[j] % klen))
+                    // if((letter % klen) == (key[j] % klen))
                     // {
                     /*
                     determine the Alphabetical index of the message[i] (0-25)
                     k is the number passed in command line
                     mod 26 insures a wrap around from Z to A
                     */
-                    letter += knum;
-                    j++;
-                    j = j % klen;
-                    // num = ((letter -65)+ knum) % 26;  // 
+
+                    num = ((letter -65)+ knum) % 26;  // 
+                   
                     // printf("39 .num is : %d\n", num);
-                    // c = num + 65;
+                    c = num + 65;
                     // printf("56 . %c becomes %c  ", letter , c);
                     // printf("61 . %c",c);   
-                    printf("%c", letter);
+                    // letter += knum;
+                    // printf("%c", letter);
+                    j++;
+                    j = j % klen; 
+                    printf("%c", c);
                     // }
                     // break;
                 // }
@@ -86,21 +89,24 @@ int main(int argc, string argv[])
                     k is the number passed in command line
                     mod 26 insures a wrap around from Z to A
                     */
-                    letter += knum;
-                    j++;
-                    j = j % klen;
-                    // num = ((letter -97)+ knum) % 26;  // 
+      
+                    num = ((letter -97)+ knum) % 26;  // 
                     // // printf("39 .num is : %d\n", num);
-                    // c = num + 97;
+                    c = num + 97;
                     // // printf("56 . %c is %c  ", letter , c);
                     // printf("%c",c);                        
                     // }
-                    printf("%c", letter);
+                    // letter += knum;
+                    j++;
+                    j = j % klen;
+                    printf("%c", c);
                 // }
             }              
 
         }
-        printf("%c\n",letter);
+        else{
+            printf("%c",letter);   
+        }
         
         // break;
     }
