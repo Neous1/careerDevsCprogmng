@@ -69,7 +69,7 @@ void vigenere(string key)
                     // printf("39 .num is : %d\n", num);
                     c = num + 65;
                     j++;
-                    j = j % klen; 
+                    j = j % klen; //wrapping around length of key
                     printf("%c", c);
 
             }

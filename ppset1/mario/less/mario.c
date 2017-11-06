@@ -9,13 +9,29 @@ Once you establish the formula, you can translate that to C!
 #include <stdio.h>
 #include <cs50.h>
 
+void mario(int height);
+
 int main(void)
 {
     int height = 0;
-    do 
+
+    
+    mario(height);
+    
+    return 0;
+}
+
+
+void mario(int height)
+{
+        do 
     {
         printf("give me a number, any number\n");
         height = get_int();  
+        if(height < 0){
+            printf("we need a positive number");
+            // return 1;
+        }
     }
     while (height < 0 || height > 23);
     {
@@ -43,4 +59,5 @@ int main(void)
             printf("\n");     
         }
     }
+    
 }

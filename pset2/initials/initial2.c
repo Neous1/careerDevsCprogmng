@@ -9,7 +9,7 @@ int main(void)
     string name = get_string();
     // string name = "john Smith huey Arring";
     
-    if (name != NULL);
+    if (name != NULL)
     {
         for (int j = 0; j < strlen(name); j++)
         //check for space in the beginning of string

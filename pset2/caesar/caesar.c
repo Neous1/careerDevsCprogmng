@@ -4,15 +4,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-// string message;
-
-    // string isalpha();
-    // char isupper(), islower();
+void caesar(int k);
 
 int main(int argc, string argv[])
 {
-
-    
     if (argc != 2){
         printf("Please provide a positive number\n");
         return 1;
@@ -21,14 +16,22 @@ int main(int argc, string argv[])
     string code = argv[1];
     int k = atoi(code);
     
+    caesar(k);
+
+    printf("\n"); // ends the program
+    return 0;
+}
+
+void caesar(int k)
+{
     char c; 
     int num;
     char letter;
 
-    printf("15 .The code is:  %d\n", k);
-        printf("What is the message: ");
+    // printf("15 .The code is:  %d\n", k);
+        printf("plaintext: ");
     string message = get_string();
-    printf("%s\n", message);
+    // printf("%s\n", message);
         printf("ciphertext: ");
     // loop thru message and encrypt each characters
     for(int i = 0, len = strlen(message);i < len; i++)
@@ -61,15 +64,10 @@ int main(int argc, string argv[])
                 c = num + 97;
                 // printf("48 . %c is %c\n  ", message[i], c);  
                 printf("%c",c);
-                
             }
         }
         else{ //  if message[i] is not a letter print the given character as is.
             printf("%c",letter);
         }
-    } 
-
-    printf("\n"); // ends the program
-    return 0;
+    }
 }
-
