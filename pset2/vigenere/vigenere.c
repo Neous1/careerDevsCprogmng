@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+
+void vigenere(string key);
+
 int main(int argc, string argv[])
 {
 
@@ -22,6 +25,15 @@ int main(int argc, string argv[])
         // team = key[k] % klen;
         // printf("key %d is on team %d\n",key[k], team );
     }
+
+    vigenere(key);
+    
+    printf("\n"); // ends the program
+    return 0;
+}
+
+void vigenere(string key)
+{
     printf("Plaintext: ");
     string plaintext = get_string();
     // printf("%s\n", plaintext);
@@ -52,11 +64,10 @@ int main(int argc, string argv[])
                     mod 26 insures a wrap around from Z to A
                     */
 
-                    num = ((letter -65)+ knum) % 26;  // 
+                    num = ((letter - 65)+ knum) % 26;  // 
                    
                     // printf("39 .num is : %d\n", num);
                     c = num + 65;
-
                     j++;
                     j = j % klen; 
                     printf("%c", c);
@@ -72,22 +83,18 @@ int main(int argc, string argv[])
                     mod 26 insures a wrap around from Z to A
                     */
       
-                    num = ((letter -97)+ knum) % 26;  // 
+                    num = ((letter - 97)+ knum) % 26;  // 
                     // // printf("39 .num is : %d\n", num);
                     c = num + 97;
-            
                     j++;
                     j = j % klen;
                     printf("%c", c);
-            }            
+            }    
 
         }
         else{
             printf("%c",letter);   
         }
     }
-
-    printf("\n"); // ends the program
-    // return 0;
 }
 
