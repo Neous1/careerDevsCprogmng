@@ -4,70 +4,92 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-// string message;
-
-    // string isalpha();
-    // char isupper(), islower();
-
 int main(int argc, string argv[])
 {
 
-    
-    if (argc != 2){
-        printf("Please provide a positive number\n");
+        if (argc != 2 ){
+        printf("missing a parameter\n");
         return 1;
     }
-    //convert command-line input to int
-    string code = argv[1];
-    int k = atoi(code);
+    string key = argv[1];
+    for(int i = 0, len = strlen(key); i < len ; i++){
+        if(!isalpha(key[i])){
+            printf("code must me in letters only\n");
+            return 1;
+        }
+    }
     
-    char c; 
-    int num;
-    char letter;
+    
+    // printf("argv is %s\n", argv[1]);
+    // // string code = argv[1];
+    // if(isalpha(argv[1])){
+    //     printf("Good to go!");
+    // }
 
-    printf("15 .The code is:  %d\n", k);
-        printf("What is the message: ");
-    string message = get_string();
-    printf("%s\n", message);
-        printf("ciphertext: ");
-    // loop thru message and encrypt each characters
-    for(int i = 0, len = strlen(message);i < len; i++)
-    {
-        // printf("character @ index %d is : %c\n", i,message[i]);  
-        letter = message[i];
+
+    // printf("%s\n", code);
+
+    
+        // printf("Plaintext: ");
+        // string plaintext = get_string();
+        // printf("%s\n", plaintext);
+        // printf("ciphertext: ");
+        // for(int i = 0, len = strlen(plaintext);i < len; i++)
+        // {
+        //     printf("%i\n", plaintext[i]);
+        // }
+    
+      
+    
+    
+
+    // char c; 
+    // int num;
+    // char letter;
+
+    // printf("15 .The code is:  %d\n", k);
+    //     printf("Plaintext: ");
+    // string message = get_string();
+    // printf("%s\n", message);
+    //     printf("ciphertext: ");
+    // // loop thru message and encrypt each characters
+    // for(int i = 0, len = strlen(message);i < len; i++)
+    // {
+    //     // printf("character @ index %d is : %c\n", i,message[i]);  
+    //     letter = message[i];
             
-        if(isalpha(message[i])) // check if character is a letter and upper case
-        {
-            // printf("34 .%c is a letter\n", message[i]);
-            if( isupper(letter))
-            {
-                // printf("37 . %c  is upper\n", letter);
-                /*
-                determine the Alphabetical index of the message[i] (0-25)
-                k is the number passed in command line
-                mod 26 insures a wrap around from Z to A
-                */
-                num = ((letter -65)+ k) % 26;  // 
-                // printf("39 .num is : %d\n", num);
-                c = num + 65;
-                // printf("41 . %c is %c\n  ", message[i] , c);
-                printf("%c",c);
-            }
-            else 
-            {
-            // printf("44 .%c is NOT upper\n", letter);
-                num = ((letter -97)+ k) % 26; 
-                // printf("46 .num is : %d\n", num);
-                c = num + 97;
-                // printf("48 . %c is %c\n  ", message[i], c);  
-                printf("%c",c);
+    //     if(isalpha(message[i])) // check if character is a letter and upper case
+    //     {
+    //         // printf("34 .%c is a letter\n", message[i]);
+    //         if( isupper(letter))
+    //         {
+    //             // printf("37 . %c  is upper\n", letter);
+    //             /*
+    //             determine the Alphabetical index of the message[i] (0-25)
+    //             k is the number passed in command line
+    //             mod 26 insures a wrap around from Z to A
+    //             */
+    //             num = ((letter -65)+ k) % 26;  // 
+    //             // printf("39 .num is : %d\n", num);
+    //             c = num + 65;
+    //             // printf("41 . %c is %c\n  ", message[i] , c);
+    //             printf("%c",c);
+    //         }
+    //         else 
+    //         {
+    //         // printf("44 .%c is NOT upper\n", letter);
+    //             num = ((letter -97)+ k) % 26; 
+    //             // printf("46 .num is : %d\n", num);
+    //             c = num + 97;
+    //             // printf("48 . %c is %c\n  ", message[i], c);  
+    //             printf("%c",c);
                 
-            }
-        }
-        else{ //  if message[i] is not a letter print the given character as is.
-            printf("%c",letter);
-        }
-    } 
+    //         }
+    //     }
+    //     else{ //  if message[i] is not a letter print the given character as is.
+    //         printf("%c",letter);
+    //     }
+    // }
 
     printf("\n"); // ends the program
     return 0;
