@@ -13,43 +13,20 @@
  */
 bool search(int value, int values[], int n)
 {
+    // TODO: implement a searching algorithm
+
     //value => int needle = atoi(argv[1]);
     //value[] => int haystack[MAX]
     // n => int size;
     
+    // loop thru the list 
+
     for (int i = 0; i<n; i++){
         if ( value == values[i]){
+            // printf("The needle is :%i\n",value);
             return true;
         }
-        // else
-        //     return false;
-        
     }
-    
-    
-    // TODO: implement a searching algorithm
-    /*
-    Search
-        return true if value is fond in haystack
-        return false if value is not in haystack
-        
-    Linear search: 
-        O(n) -> slow
-        Can search any list
-    binary search
-        O(log n) -> fast
-        can only search sorted lists
-        */
-        
-        /*
-        
-    Get a list 
-    sort the list 
-    apply binary search
-    
-    
-        
-        */
     return false;
 }
 
@@ -59,5 +36,28 @@ bool search(int value, int values[], int n)
 void sort(int values[], int n)
 {
     // TODO: implement a sorting algorithm
+    int i, temp, swapped;
+    
+        printf(" array is %i\n", values[n]);
+    
+    while(1){
+        swapped = 0;
+        for (i = 0; i < n -1 ; i++){
+            if(values[i] > values[i +1]){
+                temp = values[i];
+                values[i] = values[i + 1];
+                values[i + 1] = temp;
+                swapped = 1;
+            }
+        }
+        
+        if(swapped == 0){
+            break;
+        }
+    }
+    
+        printf(" array is %i\n", values[n]);
+
     return;
 }
+
