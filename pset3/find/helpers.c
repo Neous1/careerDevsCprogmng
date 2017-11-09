@@ -35,29 +35,63 @@ bool search(int value, int values[], int n)
  */
 void sort(int values[], int n)
 {
-    // TODO: implement a sorting algorithm
-    int i, temp, swapped;
+/**
+ * print the array generated
+ * Do
+     * set isSorted to false to start theloop
+     * loop thru the arra
+         *  if array_i is greater than array_i +1
+         * temp =  array_i
+         * array_i = array_i + 1
+         * array_i + 1 = temp
+     * set isSorted to true to stop the loop
+     * 
+     * if isSorted is == 0
+     *      break
+     * 
+     * while array is not sorted.
+     * 
+     * /
+     * 
+     */
+     
+    //  for(int i = 0; i < n; i++){
+    //     printf(" it was %i \n", values[i]);
+    //  }
     
-        printf(" array is %i\n", values[n]);
-    
-    while(1){
-        swapped = 0;
-        for (i = 0; i < n -1 ; i++){
-            if(values[i] > values[i +1]){
-                temp = values[i];
-                values[i] = values[i + 1];
-                values[i + 1] = temp;
-                swapped = 1;
-            }
-        }
-        
-        if(swapped == 0){
-            break;
-        }
-    }
-    
-        printf(" array is %i\n", values[n]);
 
+
+
+
+    // TODO: implement a sorting algorithm
+    int i =0, temp, swapped;
+            for (i = 0; i < n ; i++)
+        {
+         
+        printf("beginning array is %i\n", values[i]);   
+        }
+        do 
+        {
+            swapped = 0;
+            for (i = 0; i < n ; i++)
+            {
+                if(values[i] > values[i +1])
+                {
+                    temp = values[i];
+                    values[i] = values[i + 1];
+                    values[i + 1] = temp;
+                    swapped = 1;
+                }
+            }
+                if(swapped == 0){
+                    break;
+                 }
+        }
+    
+    while(1);
+        printf("Ending array is %i\n", values[i]);
+    
+    
     return;
 }
 
