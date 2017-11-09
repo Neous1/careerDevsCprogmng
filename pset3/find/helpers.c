@@ -13,13 +13,6 @@
  */
 bool search(int value, int values[], int n)
 {
-    // TODO: implement a searching algorithm
-
-    //value => int needle = atoi(argv[1]);
-    //value[] => int haystack[MAX]
-    // n => int size;
-    
-    // loop thru the list 
 
     for (int i = 0; i<n; i++){
         if ( value == values[i]){
@@ -35,45 +28,15 @@ bool search(int value, int values[], int n)
  */
 void sort(int values[], int n)
 {
-/**
- * print the array generated
- * Do
-     * set isSorted to false to start theloop
-     * loop thru the arra
-         *  if array_i is greater than array_i +1
-         * temp =  array_i
-         * array_i = array_i + 1
-         * array_i + 1 = temp
-     * set isSorted to true to stop the loop
-     * 
-     * if isSorted is == 0
-     *      break
-     * 
-     * while array is not sorted.
-     * 
-     * /
-     * 
-     */
-     
-    //  for(int i = 0; i < n; i++){
-    //     printf(" it was %i \n", values[i]);
-    //  }
-    
-
-
-
-
-    // TODO: implement a sorting algorithm
     int i =0, temp, swapped;
             for (i = 0; i < n ; i++)
         {
-         
         printf("beginning array is %i\n", values[i]);   
         }
         do 
         {
             swapped = 0;
-            for (i = 0; i < n ; i++)
+            for (i = 0; i < n-1 ; i++)
             {
                 if(values[i] > values[i +1])
                 {
@@ -83,26 +46,18 @@ void sort(int values[], int n)
                     swapped = 1;
                 }
             }
-            
-
                 if(swapped == 0){
                     break;
                  }
-                    // printf("Ending array is %i\n", values[i]);
-
         }
     
-    while(1);
+    while(true);
     
     printf("---------------------\n");
-                for (i = 0; i < n ; i++)
+        for (i = 0; i < n ; i++)
         {
-            
-         
-        printf("Sorted array is %i\n", values[i]);   
-        }    // printf("Ending array is %i\n", values[i]);
-    
-    
+            printf("Sorted array is %i\n", values[i]);   
+        } 
     return;
 }
 
