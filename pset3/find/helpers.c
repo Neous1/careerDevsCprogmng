@@ -83,13 +83,24 @@ void sort(int values[], int n)
                     swapped = 1;
                 }
             }
+            
+
                 if(swapped == 0){
                     break;
                  }
+                    // printf("Ending array is %i\n", values[i]);
+
         }
     
     while(1);
-        printf("Ending array is %i\n", values[i]);
+    
+    printf("---------------------\n");
+                for (i = 0; i < n ; i++)
+        {
+            
+         
+        printf("Sorted array is %i\n", values[i]);   
+        }    // printf("Ending array is %i\n", values[i]);
     
     
     return;
