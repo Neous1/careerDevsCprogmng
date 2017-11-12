@@ -149,7 +149,7 @@ void greet(void)
     printf("WELCOME TO GAME OF FIFTEEN\n");
     usleep(2000000);
 }
-cd psets
+
 /**
  * Initializes the game's board with tiles numbered 1 through d*d - 1
  * (i.e., fills 2D array with values but does not actually print them).  
