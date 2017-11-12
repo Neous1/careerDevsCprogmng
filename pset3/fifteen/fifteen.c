@@ -164,24 +164,14 @@ void init(void)
     /**
      * use the user's input to determine the size of the board
      */
-
-    //  board;
-     value = ((d*d)-1);
-     for ( i = 0; i < d ;i++){
-        for ( j = 0 ; j < d ; j++){
+     value = ((d*d)-1); // value is assigned to the index
+     for ( i = 0; i < d ;i++){ //cycle thru rows
+        for ( j = 0 ; j < d ; j++){ //cycle thre colums
              board[i][j]= value;
-        //               if(board[i][j] = 0){
-        //           value = '_';
-        //  }
              value--;    
          }  
      }
-     //if value == 0,  then change 0 to '-'
-         if(board[i][j] == 0){
-                  board[i][j] = '_';
-         }
-     }
-
+}
 
 /**
  * Prints the board in its current state.
@@ -189,19 +179,18 @@ void init(void)
 void draw(void)
 {
     // TODO
-    char c = '_';
+    char c = '_'; // char gets printed in-lieu of 0
      for ( i = 0; i < d ;i++){
          for ( j = 0 ; j < d ; j++){
-                 if(board[i][j] == 0){
-         printf("%2c", c);}
-         else{
+            if(board[i][j] == 0){ 
+                printf("%2c", c);
+            }
+            else{
             printf("%2i ", board[i][j]);
-
-     }
-         }
+            }
+        }
         printf("\n");
      }
-
 }
 
 /**
