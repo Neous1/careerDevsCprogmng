@@ -27,7 +27,7 @@
 int board[DIM_MAX][DIM_MAX];
 
 // dimensions
-int d;
+int d, i, j;
 
 // prototypes
 void clear(void);
@@ -68,6 +68,8 @@ int main(int argc, string argv[])
     // initialize the board
     init();
 
+
+        // printf(" this is d %d", d); 
     // accept moves until game is won
     while (true)
     {
@@ -160,15 +162,16 @@ void init(void)
     /**
      * use the user's input to determine the size of the board
      */
+
      
-     board;
-     for (int i = 0; i < d ;i++){
-         for (int j = 0 ; j < d ; j++){
-            //  printf(i);
-         }
+    //  board;
+    int value = ((d*d)-1);
+     for ( i = 0; i < d ;i++){
+        for ( j = 0 ; j < d ; j++){
+             board[i][j]= value;
+             value--;    
+         }  
      }
-    // printf(" dimension is : %d", d);
-    
 }
 
 /**
@@ -177,7 +180,15 @@ void init(void)
 void draw(void)
 {
     // TODO
-    printf("%d", board[][]);
+    //  for ( i = 0; i < d ;i++){
+    //      for ( j = 0 ; j < d ; j++){
+    //         printf("%i ", board[i][j]);
+    //      }
+    //     printf("\n");
+    //  }
+    
+    printf("%i", board[i][j]);
+
 }
 
 /**
