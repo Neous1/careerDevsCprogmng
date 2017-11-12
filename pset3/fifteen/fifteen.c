@@ -29,6 +29,8 @@ int board[DIM_MAX][DIM_MAX];
 // dimensions
 int d, i, j;
 
+int value;
+
 // prototypes
 void clear(void);
 void greet(void);
@@ -163,16 +165,23 @@ void init(void)
      * use the user's input to determine the size of the board
      */
 
-     
     //  board;
-    int value = ((d*d)-1);
+     value = ((d*d)-1);
      for ( i = 0; i < d ;i++){
         for ( j = 0 ; j < d ; j++){
              board[i][j]= value;
+        //               if(board[i][j] = 0){
+        //           value = '_';
+        //  }
              value--;    
          }  
      }
-}
+     //if value == 0,  then change 0 to '-'
+         if(board[i][j] == 0){
+                  board[i][j] = '_';
+         }
+     }
+
 
 /**
  * Prints the board in its current state.
@@ -180,14 +189,18 @@ void init(void)
 void draw(void)
 {
     // TODO
-    //  for ( i = 0; i < d ;i++){
-    //      for ( j = 0 ; j < d ; j++){
-    //         printf("%i ", board[i][j]);
-    //      }
-    //     printf("\n");
-    //  }
-    
-    printf("%i", board[i][j]);
+    char c = '_';
+     for ( i = 0; i < d ;i++){
+         for ( j = 0 ; j < d ; j++){
+                 if(board[i][j] == 0){
+         printf("%2c", c);}
+         else{
+            printf("%2i ", board[i][j]);
+
+     }
+         }
+        printf("\n");
+     }
 
 }
 
