@@ -30,6 +30,7 @@ int board[DIM_MAX][DIM_MAX];
 int d, i, j;
 
 int value;
+char c; // 
 
 // prototypes
 void clear(void);
@@ -171,6 +172,11 @@ void init(void)
              value--;    
          }  
      }
+     if (d % 2 == 0){
+        board[d-1][d-2] = 2; 
+        board[d-1][d-3] = 1; 
+     }
+     
 }
 
 /**
@@ -179,7 +185,8 @@ void init(void)
 void draw(void)
 {
     // TODO
-    char c = '_'; // char gets printed in-lieu of 0
+    
+     c = '_'; // char gets printed in-lieu of 0
      for ( i = 0; i < d ;i++){
          for ( j = 0 ; j < d ; j++){
             if(board[i][j] == 0){ 
@@ -188,10 +195,13 @@ void draw(void)
             else{
             printf("%2i ", board[i][j]);
             }
+        
+         
         }
         printf("\n");
-     }
+    }
 }
+
 
 /**
  * If tile borders empty space, moves tile and returns true, else
@@ -200,6 +210,48 @@ void draw(void)
 bool move(int tile)
 {
     // TODO
+    //find the position of '_';
+    // cPos
+    // do
+    // {
+    //     swapped = 0;
+    //     //loop thru the board;
+    //     for (i = 0; i < d ; i++)
+    //     {
+    //         for(j = 0; j < d ; j++)
+    //         {
+    //             //print the value;
+    //             //print the position;
+    //             if(title == value){
+    //                 swapped tile and c
+    //             }
+    //         }
+    //     }
+        
+    // }
+    
+    /**
+     *recall the position of the empty space
+    determine the position of tile chosen by user 
+    
+    
+    // track the empty space
+    how to determine the position of the empty space 
+    list all the tiles legally swappable.
+    */
+    
+    //track the given number 
+    //  for (i = 0; i < d ;i++){ 
+    //     for ( j = 0 ; j < d ; j++){ 
+    //          board[i][j]= value;
+    //          value--;    
+    //      }  
+    //  }
+     
+     
+     
+     
+    
     return false;
 }
 
