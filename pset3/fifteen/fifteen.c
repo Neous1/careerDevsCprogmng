@@ -176,7 +176,6 @@ void init(void)
         board[d-1][d-2] = 2; 
         board[d-1][d-3] = 1; 
      }
-     
 }
 
 /**
@@ -193,7 +192,7 @@ void draw(void)
                 printf("%2c", c);
             }
             else{
-            printf("%2i ", board[i][j]);
+            printf("%2i", board[i][j]);
             }
         
          
@@ -210,48 +209,52 @@ void draw(void)
 bool move(int tile)
 {
     // TODO
-    //find the position of '_';
-    // cPos
-    // do
-    // {
-    //     swapped = 0;
-    //     //loop thru the board;
-    //     for (i = 0; i < d ; i++)
-    //     {
-    //         for(j = 0; j < d ; j++)
-    //         {
-    //             //print the value;
-    //             //print the position;
-    //             if(title == value){
-    //                 swapped tile and c
-    //             }
-    //         }
-    //     }
-        
-    // }
     
-    /**
-     *recall the position of the empty space
-    determine the position of tile chosen by user 
+    for(int i = 0; i < d ; i++)
+    {
+        for (int j= 0; j < d ; j++)
+        {
+            if (board[i][j] == 0)
+            {
+                for(int k = 0; k < d ; k++)
+                {
+                    for (int l= 0; l < d ; l++)
+                    {
+                        if(board[i-1][j] == tile) //check bottom row
+                        {
+                            printf("found it");
+                            board[i][j] = tile;
+                            board[i-1][j] = 0; 
+                            return true;
+                        }
+                        if(board[i][j + 1] == tile) // check right column
+                        {
+                            printf("found it");
+                            board[i][j] = tile;
+                            board[i][j + 1] = 0; 
+                            return true;
+                        }
+                        if(board[i + 1][j] == tile) // check top row
+                        {
+                            printf("found it");
+                            board[i][j] = tile;
+                            board[i + 1][j] = 0;
+                            return true;
+                        }
+                        if(board[i][j -1] == tile) // check left column
+                        {
+                            printf("found it");
+                            board[i][j] = tile;
+                            board[i][j -1] = 0;
+                            return true;
+                        }                        
+                    }
+                        break;
+                }
+            }
+        }
     
-    
-    // track the empty space
-    how to determine the position of the empty space 
-    list all the tiles legally swappable.
-    */
-    
-    //track the given number 
-    //  for (i = 0; i < d ;i++){ 
-    //     for ( j = 0 ; j < d ; j++){ 
-    //          board[i][j]= value;
-    //          value--;    
-    //      }  
-    //  }
-     
-     
-     
-     
-    
+    }    
     return false;
 }
 
@@ -259,6 +262,8 @@ bool move(int tile)
  * Returns true if game is won (i.e., board is in winning configuration), 
  * else false.
  */
+ 
+ 
 bool won(void)
 {
     // TODO
