@@ -126,7 +126,7 @@ int main(int argc, string argv[])
         }
 
         // sleep thread for animation's sake
-        usleep(500000);
+        usleep(5000);
     }
     
     // close log
@@ -194,8 +194,6 @@ void draw(void)
             else{
             printf("%2i", board[i][j]);
             }
-        
-         
         }
         printf("\n");
     }
@@ -249,7 +247,8 @@ bool move(int tile)
                             return true;
                         }                        
                     }
-                        break;
+                    // printf(value);
+                    // printf(cont);
                 }
             }
         }
@@ -266,6 +265,27 @@ bool move(int tile)
  
 bool won(void)
 {
+    
     // TODO
-    return false;
+    int count=0;
+    for(int i = 0; i<d; i++){
+        for(int j = 0; j < d; j++){
+            // if (count == !((d*d)-1)){
+            //     return false;
+            // }
+            
+            if( ++count != ((d*d)) &&
+                (count != board[i][j])
+                ){
+                // count++;
+
+            return false;
+            // count++;
+            }
+
+
+        }
+    }
+                return true;
+    // return false;
 }
