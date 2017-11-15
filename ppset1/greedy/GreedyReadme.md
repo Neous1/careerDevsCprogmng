@@ -1,16 +1,5 @@
-Table of Contents
 
-* [tl;dr](https://docs.cs50.net/problems/greedy/greedy.html#tl-dr)
-* [Background](https://docs.cs50.net/problems/greedy/greedy.html#background)
-* [Specification](https://docs.cs50.net/problems/greedy/greedy.html#specification)
 * [Walkthrough](https://docs.cs50.net/problems/greedy/greedy.html#walkthrough)
-* [Usage](https://docs.cs50.net/problems/greedy/greedy.html#usage)
-* [Testing](https://docs.cs50.net/problems/greedy/greedy.html#testing)
-  - [`check50`](https://docs.cs50.net/problems/greedy/greedy.html#code-check50-code)
-* [Staff Solution](https://docs.cs50.net/problems/greedy/greedy.html#staff-solution)
-* [Hints](https://docs.cs50.net/problems/greedy/greedy.html#hints)
-* [FAQs](https://docs.cs50.net/problems/greedy/greedy.html#faqs)
-* [CHANGELOG](https://docs.cs50.net/problems/greedy/greedy.html#changelog)
 
 # Greedy
 

@@ -1,15 +1,6 @@
-Table of Contents
 
-* [tl;dr](https://docs.cs50.net/problems/mario/less/mario.html#tl-dr)
-* [Background](https://docs.cs50.net/problems/mario/less/mario.html#background)
-* [Specification](https://docs.cs50.net/problems/mario/less/mario.html#specification)
 * [Walkthrough](https://docs.cs50.net/problems/mario/less/mario.html#walkthrough)
-* [Usage](https://docs.cs50.net/problems/mario/less/mario.html#usage)
-* [Testing](https://docs.cs50.net/problems/mario/less/mario.html#testing)
-  - [Correctness](https://docs.cs50.net/problems/mario/less/mario.html#correctness)
-  - [Style](https://docs.cs50.net/problems/mario/less/mario.html#style)
-* [Staff Solution](https://docs.cs50.net/problems/mario/less/mario.html#staff-solution)
-* [Hints](https://docs.cs50.net/problems/mario/less/mario.html#hints)
+
 
 # Mario
 

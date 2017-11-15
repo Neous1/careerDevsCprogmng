@@ -1,20 +1,6 @@
-1 Tracker DoubleClick
 
-Table of Contents
-
-* [tl;dr](https://docs.cs50.net/problems/whodunit/whodunit.html#tl-dr)
-* [Distribution](https://docs.cs50.net/problems/whodunit/whodunit.html#distribution)
-  - [Downloading](https://docs.cs50.net/problems/whodunit/whodunit.html#downloading)
-* [Background](https://docs.cs50.net/problems/whodunit/whodunit.html#background)
-* [Questions](https://docs.cs50.net/problems/whodunit/whodunit.html#questions)
-* [Specification](https://docs.cs50.net/problems/whodunit/whodunit.html#specification)
 * [Walkthrough](https://docs.cs50.net/problems/whodunit/whodunit.html#walkthrough)
-* [Usage](https://docs.cs50.net/problems/whodunit/whodunit.html#usage)
-* [Hints](https://docs.cs50.net/problems/whodunit/whodunit.html#hints)
-* [Testing](https://docs.cs50.net/problems/whodunit/whodunit.html#testing)
-* [Staff's Solution](https://docs.cs50.net/problems/whodunit/whodunit.html#staff-s-solution)
-* [FAQs](https://docs.cs50.net/problems/whodunit/whodunit.html#faqs)
-* [Changelog](https://docs.cs50.net/problems/whodunit/whodunit.html#changelog)
+
 
 # Whodunit
 

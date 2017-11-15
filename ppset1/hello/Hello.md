@@ -1,6 +1,3 @@
-1 Tracker DoubleClick
-
-Table of Contents
 
 * [Walkthrough](https://docs.cs50.net/problems/hello/hello.html#walkthrough)
 # Hello
