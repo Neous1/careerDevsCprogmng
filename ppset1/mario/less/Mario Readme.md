@@ -46,6 +46,7 @@ Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascen
 * Take care to align the bottom-left corner of your half-pyramid with the left-hand edge of your terminal window.
 
 ## [Walkthrough](https://docs.cs50.net/problems/mario/less/mario.html#walkthrough)
+https://youtu.be/EGWRG5e1O2s
 
 ## [Usage](https://docs.cs50.net/problems/mario/less/mario.html#usage)
 

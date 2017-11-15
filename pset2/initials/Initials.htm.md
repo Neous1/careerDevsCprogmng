@@ -1,16 +1,3 @@
-1 Tracker DoubleClick
-
-Table of Contents
-
-* [tl;dr](https://docs.cs50.net/problems/initials/less/initials.html#tl-dr)
-* [Specification](https://docs.cs50.net/problems/initials/less/initials.html#specification)
-* [Walkthrough](https://docs.cs50.net/problems/initials/less/initials.html#walkthrough)
-* [Usage](https://docs.cs50.net/problems/initials/less/initials.html#usage)
-* [Testing](https://docs.cs50.net/problems/initials/less/initials.html#testing)
-  - [`check50`](https://docs.cs50.net/problems/initials/less/initials.html#code-check50-code)
-* [Staff's Solution](https://docs.cs50.net/problems/initials/less/initials.html#staff-s-solution)
-* [FAQs](https://docs.cs50.net/problems/initials/less/initials.html#faqs)
-* [Changelog](https://docs.cs50.net/problems/initials/less/initials.html#changelog)
 
 # Initials
 
