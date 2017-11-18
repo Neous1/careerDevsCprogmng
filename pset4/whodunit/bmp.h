@@ -60,7 +60,7 @@ typedef struct
 } __attribute__((__packed__))
 BITMAPINFOHEADER; 
 
-/**
+/**  
  * RGBTRIPLE
  *
  * This structure describes a color consisting of relative intensities of
